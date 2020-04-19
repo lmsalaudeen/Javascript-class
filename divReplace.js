@@ -1,37 +1,37 @@
+//Write a function that takes one parameter (a whole number/integer) 
+//and checks if numbers from 1 to the given parameter (inclusive) are divisible by 2,3,5 
+//while replacing with the appropriate words as specified below.
+let numbers = [];
 function divReplacement(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 ==0 && arr[i] % 3 == 0 && arr[i] % 5 == 0) 
-            arr[i] = "yu-gi-oh";
-        else if (arr[i] % 2 ==0 && arr[i] % 5 == 0) 
-            arr[i] = "yu-oh";
-        else if (arr[i] % 3 ==0 && arr[i] % 5 == 0) 
-            arr[i] = "gi-oh";
-        else if (arr[i] % 2 == 0 && arr[i] % 3 == 0) 
-            arr[i] = "yu-gi";
-        else  if (arr[i] % 2 == 0) 
-            arr[i] = "yu";
-        else if (arr[i] % 3 == 0) 
-            arr[i] = 'gi';
-        else if (arr[i] % 5 == 0) 
-            arr[i] = "oh";
+    for (let i = 1; i <= arr; i++) {
+        if (i % 2 ==0 && i % 3 == 0 && i % 5 == 0) 
+            numbers.push("yu-gi-oh");
+        else if (i % 2 ==0 && i % 5 == 0) 
+            numbers.push("yu-oh");
+        else if (i % 3 ==0 && i % 5 == 0) 
+            numbers.push("gi-oh");
+        else if (i % 2 == 0 && i % 3 == 0) 
+            numbers.push("yu-gi");
+        else  if (i % 2 == 0) 
+            numbers.push("yu");
+        else if (i % 3 == 0) 
+            numbers.push('gi');
+        else if (i % 5 == 0) 
+            numbers.push("oh");
         else
-            arr[i] = arr[i];   
+        numbers.push(i);
         }
-    console.log(arr);
+//Return an array containing all numbers from 1 to the passed argument 
+
     return arr;
 }
+//Call the function and pass 100 as an argument.
+divReplacement(100);
 
-let oneHundred = new Array(100);
-for (let i = 0; i < oneHundred.length; i++) {
-    oneHundred[i] = i + 1; 
-}
-divReplacement(oneHundred);
+//Call the function and pass it a random number of your choice
+divReplacement(10);
+console.log(numbers);
 
-let thirty = new Array(30);
-for (let i = 0; i < thirty.length; i++) {
-    thirty[i] = i + 1; 
-}
-divReplacement(thirty);
 
 
     
